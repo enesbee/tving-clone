@@ -1,12 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import GlobalStyle from "./globalStyle";
+import App from "./App";
+import { ThemeProvider } from "styled-components";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { theme } from "./theme";
 
+const client = new QueryClient();
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <QueryClientProvider client={client}>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <App />
+      </ThemeProvider>
+    </QueryClientProvider>
   </React.StrictMode>
 );
