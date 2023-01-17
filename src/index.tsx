@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import GlobalStyle from "./globalStyle";
 import App from "./App";
 import { ThemeProvider } from "styled-components";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { theme } from "./theme";
+import GlobalStyle from "./globalStyle";
 
 const client = new QueryClient();
 const root = ReactDOM.createRoot(

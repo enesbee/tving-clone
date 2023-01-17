@@ -61,8 +61,8 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-weight: 300;
     font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    background-color: black;
-    color: ${(props) => props.theme.white.darker};
+    background-color: ${(props) => props.theme.palette.common.black};
+    color: ${(props) => props.theme.palette.common.white};
     line-height: 1.2;
 
   }
