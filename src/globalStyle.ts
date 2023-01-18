@@ -58,12 +58,61 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  html {
+    &.hide-scrollbar {
+      overflow: scroll;
+      overflow-x: hidden;
+
+      ::-webkit-scrollbar {
+        width: 0;
+        background: transparent;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 12px;
+      &.is-laptop {
+        font-size: calc(6px + 0.5vw);
+      }
+    }
+    @media screen and (min-width: 768px) {
+      font-size: 1.2vw;
+      &.is-laptop {
+        font-size: calc(6px + 0.5vw);
+      }
+    }
+    @media screen and (min-width: 768px) and (orientation: portrait) {
+      font-size: 1.5vw;
+      &.is-laptop {
+        font-size: calc(6px + 0.5vw);
+      }
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 1vw;
+      &.is-laptop {
+        font-size: calc(6px + 0.5vw);
+      }
+    }
+    @media screen and (min-width: 2000px) {
+      font-size: 16px;
+      &.is-laptop {
+        font-size: 16px;
+      }
+    }
+    @media screen and (min-width: 2400px) {
+      font-size: 18px;
+      &.is-laptop {
+        font-size: 18px;
+      }
+    }
+  }
   body {
-    font-weight: 300;
+    font-weight: 400;
     font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     background-color: ${(props) => props.theme.palette.common.black};
     color: ${(props) => props.theme.palette.common.white};
-    line-height: 1.2;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
 
   }
 
