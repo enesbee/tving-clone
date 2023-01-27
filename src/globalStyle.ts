@@ -120,6 +120,14 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     color: inherit;
   }
+
+  button {
+  border:0;
+    background-color: transparent;
+    padding:0;
+    margin:0;
+    vertical-align:middle;
+  }
 `;
 
 export default GlobalStyle;
