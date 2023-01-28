@@ -32,10 +32,6 @@ const GlobalStyle = createGlobalStyle`
     display: none;
   }
 
-  body {
-    line-height: 1;
-  }
-
   menu, ol, ul {
     list-style: none;
   }
@@ -57,7 +53,9 @@ const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
   }
-
+strong {
+  font-weight: bold;
+}
   html {
     &.hide-scrollbar {
       overflow: scroll;
@@ -113,7 +111,6 @@ const GlobalStyle = createGlobalStyle`
     color: ${(props) => props.theme.palette.common.white};
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
-
   }
 
   a {
