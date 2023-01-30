@@ -89,33 +89,33 @@ function Header() {
                         <path
                           d="M900.019 37.073h-3.165v-5.1h.792v4.413h2.374z"
                           stroke="#fff"
-                          stroke-linejoin="round"
+                          strokeLinejoin="round"
                           fill="#fff"
-                          stroke-width="0.2px"
+                          strokeWidth="0.2px"
                           transform="translate(-896.854 -31.974)"
                         />
                         <path
                           d="M900.752 37.073v-5.1h.792v5.1z"
                           stroke="#fff"
-                          stroke-linejoin="round"
+                          strokeLinejoin="round"
                           fill="#fff"
-                          stroke-width="0.2px"
+                          strokeWidth="0.2px"
                           transform="translate(-896.54 -31.974)"
                         />
                         <path
                           d="M904.117 37.073l-1.819-5.1h.859l1.388 4.208h.022l1.392-4.208h.845l-1.82 5.1z"
                           stroke="#fff"
-                          stroke-linejoin="round"
+                          strokeLinejoin="round"
                           fill="#fff"
-                          stroke-width="0.2px"
+                          strokeWidth="0.2px"
                           transform="translate(-896.249 -31.974)"
                         />
                         <path
                           d="M910.574 37.073h-3.236v-5.1h3.236v.682h-2.444v1.491h2.314v.654h-2.314v1.583h2.444z"
                           stroke="#fff"
-                          stroke-linejoin="round"
+                          strokeLinejoin="round"
                           fill="#fff"
-                          stroke-width="0.2px"
+                          strokeWidth="0.2px"
                           transform="translate(-895.737 -31.974)"
                         />
                       </g>
@@ -123,9 +123,9 @@ function Header() {
                         <g
                           fill="none"
                           stroke="#fff"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1.2px"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="1.2px"
                           opacity="0.998"
                           transform="translate(0 3.025)"
                         >
@@ -142,17 +142,17 @@ function Header() {
                           <path
                             d="M3.055 3L0 0"
                             stroke="#fff"
-                            stroke-linejoin="round"
-                            stroke-linecap="round"
-                            stroke-width="1.2px"
+                            strokeLinejoin="round"
+                            strokeLinecap="round"
+                            strokeWidth="1.2px"
                             transform="translate(-0.471)"
                           />
                           <path
                             d="M0 3L3.055 0"
                             stroke="#fff"
-                            stroke-linecap="round"
-                            stroke-width="1.2px"
-                            stroke-linejoin="round"
+                            strokeLinecap="round"
+                            strokeWidth="1.2px"
+                            strokeLinejoin="round"
                             transform="translate(4.024)"
                           />
                         </g>
@@ -185,10 +185,10 @@ function Header() {
           >
             <g opacity="0.997">
               <path fill="rgba(255,255,255,0)" d="M0 0H28V28H0z" />
-              <g fill="none" stroke="#fff" stroke-width="1.5px">
+              <g fill="none" stroke="#fff" strokeWidth="1.5px">
                 <path
-                  stroke-linecap="round"
-                  stroke-miterlimit="10"
+                  strokeLinecap="round"
+                  strokeMiterlimit="10"
                   d="M0 0L4.813 4.89"
                   transform="translate(3 3) translate(15.688 16.574)"
                 />
