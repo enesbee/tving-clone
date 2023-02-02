@@ -11,6 +11,27 @@ const HeaderDiv = styled.header`
   top: 0;
   left: 0;
   padding: 0 3.888rem;
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -1px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translate3d(0, 0, 0);
+    -webkit-backdrop-filter: blur(0px);
+    backdrop-filter: blur(0px);
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0)
+    );
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(255, 255, 255, 1);
+    transition: backdrop-filter 0.3s linear, background-color 0.3s linear;
+  }
 `;
 
 const Col = styled.div`
