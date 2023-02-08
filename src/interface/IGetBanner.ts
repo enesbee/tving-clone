@@ -20,7 +20,7 @@ export interface Result {
   display_position?: number;
   mapping_contents_name?: null;
   mapping_image_type?: null;
-  mapping_image_url?: null;
+  mapping_image_url?: string;
   tag_mapping_image_type?: null;
   tag_mapping_image_url?: null;
   add_clip?: null;

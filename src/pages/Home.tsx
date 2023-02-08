@@ -1,13 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import { useQuery } from "react-query";
 import styled from "styled-components";
-import { getContent } from "../api";
-import { IGetContent } from "../interface/IGetContent";
-import { getImagePath } from "../util/utils";
+import { getBanner } from "../api";
 import { motion } from "framer-motion";
+import { IGetBanner } from "../interface/IGetBanner";
+import { getImagePath } from "../util/utils";
 
 const Wrapper = styled.div``;
-const Banner = styled.div``;
+const Banner = styled.div`
+  overflow: hidden;
+`;
+
+const BannerRow = styled.div`
+  width: 100%;
+`;
+
+const BannerBox = styled(motion.div)`
+  display: flex;
+  width: 100%;
+
+  &:first-child {
+    transform-origin: center left;
+  }
+
+  &:last-child {
+    transform-origin: center right;
+  }
+
+  img {
+    width: 100%;
+    vertical-align: bottom;
+  }
+`;
+
+const Overview = styled.p`
+  font-size: 32px;
+  width: 50%;
+`;
 const Loader = styled.div``;
 const Slider = styled.div`
   padding: 0 3.888rem;
@@ -41,11 +70,32 @@ const Box = styled(motion.div)`
     vertical-align: bottom;
   }
 `;
+
+const RowVariants = {
+  hidden: {
+    x: window.outerWidth + 5,
+  },
+  visible: {
+    x: 0,
+  },
+  exit: {
+    x: -window.outerWidth - 5,
+  },
+};
+const BoxVariants = {
+  normal: { scale: 1 },
+  hover: {
+    y: -50,
+    scale: 1.2,
+    transition: { duration: 0.3, delay: 0.5 },
+  },
+};
 function Home() {
-  const { data, isLoading } = useQuery<IGetContent>(
+  const { data, isLoading } = useQuery<IGetBanner>(
     ["contents", "content"],
-    getContent
+    getBanner
   );
+  const [bannerIndex, setBannerIndex] = useState(0);
   console.log(data?.body);
   return (
     <Wrapper>
@@ -97,20 +147,38 @@ function Home() {
         </Loader>
       ) : (
         <>
-          <Banner></Banner>
-          <Slider>
-            <Title>{data?.body?.info.title}</Title>
-            <Row>
-              {data?.body?.result.map((vod) => (
-                <Box>
+          <Banner>
+            <BannerRow>
+              {data?.body?.result.map((banner) => (
+                <BannerBox
+                  variants={RowVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  transition={{ type: "tween", duration: 1 }}
+                  key={banner.display_position}
+                >
                   <img
-                    src={getImagePath(vod.content.program.image[3].url)}
-                    alt=""
+                    src={getImagePath(banner?.content?.banner_image_url!)}
+                    alt={banner.content?.banner_title}
                   />
-                </Box>
+                </BannerBox>
               ))}
-            </Row>
-          </Slider>
+            </BannerRow>
+          </Banner>
+          {/*<Slider>*/}
+          {/*  <Title>{data?.body?.info.title}</Title>*/}
+          {/*  <Row>*/}
+          {/*    {data?.body?.result.map((vod) => (*/}
+          {/*      <Box>*/}
+          {/*        <img*/}
+          {/*          src={getImagePath(vod.content.program.image[3].url)}*/}
+          {/*          alt=""*/}
+          {/*        />*/}
+          {/*      </Box>*/}
+          {/*    ))}*/}
+          {/*  </Row>*/}
+          {/*</Slider>*/}
         </>
       )}
     </Wrapper>
