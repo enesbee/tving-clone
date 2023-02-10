@@ -125,6 +125,24 @@ strong {
     margin:0;
     vertical-align:middle;
   }
+  
+  .swiper-pagination {
+    position: absolute;
+    bottom: 20%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    z-index: 100;
+    top: auto;
+    right: auto;
+    text-align: left;
+    margin-left: 1.666rem;
+    left: 1.333rem;
+  }
+  .swiper-slide img {
+    width: 100%;
+  }
 `;
 
 export default GlobalStyle;

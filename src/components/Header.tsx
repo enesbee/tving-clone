@@ -7,6 +7,7 @@ const HeaderDiv = styled.header`
   justify-content: flex-start;
   align-items: center;
   position: fixed;
+  z-index: 100;
   width: 100%;
   top: 0;
   left: 0;
@@ -104,7 +105,11 @@ function Header() {
                   viewBox="0 0 24 24"
                 >
                   <g transform="translate(2 2.393)">
-                    <path d="M0 0H24V24H0z" transform="translate(-2 -2.393)" />
+                    <path
+                      d="M0 0H24V24H0z"
+                      transform="translate(-2 -2.393)"
+                      fill="rgba(0,0,0,0)"
+                    />
                     <g transform="translate(-2 0.58)">
                       <g transform="translate(4.6 8.423)">
                         <path
