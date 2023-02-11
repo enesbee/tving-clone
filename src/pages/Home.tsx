@@ -8,6 +8,7 @@ import "swiper/css/autoplay";
 import "swiper/css/effect-fade";
 import MainBanner from "../components/MainBanner";
 import MainContents from "../components/MainContents";
+import MainThemes from "../components/MainThemes";
 
 const Wrapper = styled.div``;
 
@@ -66,6 +67,7 @@ function Home() {
       <>
         <MainBanner />
         <MainContents />
+        <MainThemes />
       </>
       {/*)}*/}
     </Wrapper>
